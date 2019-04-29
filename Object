@@ -1,5 +1,7 @@
 public class Digimon {
     
+    String name;
+    String type;
     int level = 0;
     int attack = 0;
     int defense = 0;
@@ -9,8 +11,8 @@ public class Digimon {
     int ability = 0;
     int health = 0;
     
-    String nama (String nama){
-        return nama;
+    String name (String name){
+        return name;
     }
     String type (String type){
         return type;
@@ -43,11 +45,23 @@ public class Digimon {
 
 }
 
+public class Egg extends Digimon{
+    int travel = 0;
+    
+    Integer travel (int travel){
+        return this.travel = travel;
+    }
+    
+    
+}
+
 public class driver {
     public static void main(String[] args){
         Digimon monster = new Digimon();
+        Egg telur = new Egg();
         
-        System.out.println("Nama : " + monster.nama("Omnimon"));
+        System.out.println("------------DIGIMON----------");
+        System.out.println("Nama : " + monster.name("Omnimon"));
         System.out.println("Type : " + monster.type("Vaccine"));
         System.out.println("Level : " + monster.level(99));
         System.out.println("HP : " + monster.health(8302));
@@ -58,6 +72,17 @@ public class driver {
         System.out.println("Ability : " + monster.ability(1853));
         System.out.println("Experience : " + monster.experience(0));
         
-        
+        System.out.println("------------EGG-----------");
+        System.out.println("Nama : " + monster.name("DigiEgg"));
+        System.out.println("Type : " + monster.type("N/A"));
+        System.out.println("Level : " + monster.level(0));
+        System.out.println("HP : " + monster.health(0));
+        System.out.println("Attack : " + monster.attack(0));
+        System.out.println("Defense : " + monster.defense(0));
+        System.out.println("Intelligent : " + monster.intelligent(0));
+        System.out.println("Speed : " + monster.speed(0));
+        System.out.println("Ability : " + monster.ability(0));
+        System.out.println("Experience : " + monster.experience(0));
+        System.out.println("Travel Distance : " + telur.travel(100));
     }
 }
